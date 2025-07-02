@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio Website</title>
+
+  <!-- Lien vers la feuille CSS externe -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Font Awesome 5 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <link rel="icon" href="image/favicon.png" type="image/png" />
+  <script src="js/lang.js"></script>
+
+</head>
+<body>
+
+<div id="header">
+  <div class="container">
+
+      <nav>
+      <h1>ouma<span>ima</span></h1>
+      <ul id="sidemenu">
+        <li><a href="#header" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        <i class="fas fa-times" onclick="closemenu()"></i>
+      </ul>
+      <i class="fas fa-bars" onclick="openmenu()"></i>
+      <select id="language-select" onchange="changeLanguage(this.value)">
+        <option value="fr">FR</option>
+        <option value="en">EN</option>
+        <option value="ar">AR</option>
+      </select>
+    </nav>
+    <br>
+
+<br>
+<div class="header-content">
+  
+  <div class="social-icons-side">
+  <a href="https://github.com/oumaoubbad" target="_blank" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/oumaima-oubbad-8049391a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.facebook.com/oumaima.oubbad.7" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  
+</div>
+
+
+  <!-- Texte principal -->
+  <div class="header-text">
+    <p data-i18n="greeting">Salut, je m'appelle</p>
+    <h2><span>Oumaima OUBBAD</span></h2>    
+    <h3 data-i18n="job_title">je suis <span>développeuse Fullstack</span></h3> 
+    <p class="description" data-i18n="description">
+      spécialisée dans la création de solutions web <br> performantes et sur mesure
+    </p>
+    <div class="social-download">
+      <a href="image/OumaimaOubbad.pdf" download class="btn btn2" data-i18n="download_cv">Download CV</a>
+    </div>
+  </div>
+
+  <!-- Photo -->
+  <div class="photo-container">
+    <img src="image/AvatarMaker.png" alt="Photo de profil">
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+
+<!-- Le reste de ta page (About, Services, Portfolio, Contact) reste identique -->
+
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="image/ouma.jpeg" alt="Photo de Oumaima" /> 
+      </div>
+      <br>
+      <div class="about-col-2">
+        <h1 class="sub-title" data-i18n="about_me">About Me</h1>  <br><br>
+        <p data-i18n="bio">Oumaima Oubbad, ingénieure en informatique diplômée...</p>
+        <div class="table-titles">
+          <p class="tab-links active-link" onclick="opentab(event, 'skills')" data-i18n="skills">Skills</p>
+          <p class="tab-links" onclick="opentab(event, 'experience')" data-i18n="experience">Experience</p>
+          <p class="tab-links" onclick="opentab(event, 'education')" data-i18n="education">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <div class="skills-section">
+                 <div class="skill left">
+    <span class="label">PHP</span>
+    <div class="progress-bar">
+      <div class="progress" style="width: 80%;"></div>
+    </div>
+  </div>
+
+  <div class="skill left">
+    <span class="label">HTML</span>
+    <div class="progress-bar">
+      <div class="progress" style="width: 100%;"></div>
+    </div>
+  </div>
+
+  <div class="skill left">
+    <span class="label">LARAVEL</span>
+    <div class="progress-bar">
+      <div class="progress" style="width: 100%;"></div>
+    </div>
+  </div>
+
+   <div class="skill left">
+    <span class="label">CSS</span>
+    <div class="progress-bar">
+      <div class="progress" style="width: 85%;"></div>
+    </div>
+  </div>
+    <div class="skill left">
+    <span class="label">PYTHON</span>
+    <div class="progress-bar">
+      <div class="progress" style="width: 75%;"></div>
+    </div>
+  </div>
+    <div class="skill left">
+    <span class="label">JS</span>
+    <div class="progress-bar">
+      <div class="progress" style="width: 80%;"></div>
+    </div>
+  </div>
+              </div>
+</div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2025</span><br />Développeuse Fullstack freelance chez Chawtin Business</li>
+            <li><span>2024</span><br />Développeuse web & support IT chez Enjoy Market</li>
+            <li><span>2023</span><br />Développeuse Fullstack chez DIGI Invest</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2017</span><br />Master en technologie de l'information</li>
+            <li><span>2020</span><br />Licence en technologie de l'information</li>
+            <li><span>2022</span><br />BBA from ISM Bangalore</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="services">
+  <div class="container">
+    <br>
+    <br>
+    <h1 class="sub-title" data-i18n="my_services">Mes Services</h1>
+    <br>
+    <br>
+     <div class="services-wrapper">
+      <div class="services-list">
+        <div class="service-box">
+          <i class="fas fa-code"></i>
+          <h2>Développement web</h2>
+          <p>Création de sites internet et d'applications web modernes et performants.</p>
+        </div>
+
+        <div class="service-box">
+          <i class="fas fa-sync-alt"></i>
+          <h2>Adaptation d’applications web</h2>
+          <p>Personnalisation d’applications existantes selon les besoins spécifiques des clients.</p>
+        </div>
+
+        <div class="service-box">
+          <i class="fas fa-robot"></i>
+          <h2>Scripts automatisés</h2>
+          <p>Création de scripts pour automatiser les tâches manuelles et répétitives.</p>
+        </div>
+
+        <div class="service-box">
+          <i class="fas fa-headset"></i>
+          <h2>Support IT</h2>
+          <p>Assistance technique et support informatique aux équipes internes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title" data-i18n="my_work">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+        <img src="image/portfolio.jpeg" alt="Project 3" />
+        <div class="layer">
+         <h3>Site Web Personnel</h3>
+<p>Un portfolio moderne qui présente mon parcours, mes compétences et mes projets réalisés.</p>
+<br>
+    <br>
+<a href="" target="_blank" class="github-link">
+  <!-- Icône GitHub SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 6px;">
+    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+    0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+    1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+    0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.7 7.7 0 012 0c1.53-1.03 
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 
+    3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 
+    8 0 0016 8c0-4.42-3.58-8-8-8z"/>
+  </svg>
+  Voir sur GitHub
+</a>
+        </div>
+      </div>
+    <div class="work">
+  <img src="image/auto.jpeg" alt="Project 1" />
+  <div class="layer">
+    <h3>Application de Gestion de Parc Automobile</h3>
+<p>
+  Solution web permettant de gérer les véhicules d’entreprise avec un système intégré de réservation, d’entretien et de suivi du parc.
+</p>
+<br>
+    <br>
+<a href="https://github.com/oumaoubbad/AutoParc" target="_blank" class="github-link">
+  <!-- Icône GitHub SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 6px;">
+    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+    0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+    1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+    0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.7 7.7 0 012 0c1.53-1.03 
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 
+    3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 
+    8 0 0016 8c0-4.42-3.58-8-8-8z"/>
+  </svg>
+  Voir sur GitHub
+</a>
+  </div>
+</div>
+      <div class="work">
+        <img src="image/rh.jpeg" alt="Project 2" />
+        <div class="layer">
+          <h3>Application de Gestion des Ressources Humaines</h3>
+<p>
+  Application dédiée à la gestion des ressources humaines de la société 2itech, facilitant le suivi du personnel, des congés, des recrutements et des tâches administratives.
+</p>
+<br>
+    <br>
+<a href="https://github.com/oumaoubbad/projetRH" target="_blank" class="github-link">
+  <!-- Icône GitHub SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 6px;">
+    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+    0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+    1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+    0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.7 7.7 0 012 0c1.53-1.03 
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 
+    3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 
+    8 0 0016 8c0-4.42-3.58-8-8-8z"/>
+  </svg>
+  Voir sur GitHub
+</a>
+
+        </div>
+      </div>
+      <div class="work">
+        <img src="image/formateur.jpeg" alt="Project 3" />
+        <div class="layer">
+          <h3>Site Web & Application de Gestion des Formateurs</h3>
+<p>
+  Plateforme centralisée pour organiser la gestion des formateurs et automatiser le recrutement au sein de la société ETAC.
+</p>
+<br>
+    <br>
+<a href="https://github.com/oumaoubbad/GFormateurs" target="_blank" class="github-link">
+  <!-- Icône GitHub SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 6px;">
+    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+    0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+    1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+    0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.7 7.7 0 012 0c1.53-1.03 
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 
+    3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 
+    8 0 0016 8c0-4.42-3.58-8-8-8z"/>
+  </svg>
+  Voir sur GitHub
+</a>
+        </div>
+      </div>
+       <div class="work">
+        <img src="image/grh.jpeg" alt="Project 3" />
+        <div class="layer">
+          <h3>Application de Gestion des Ressources Humaines</h3>
+<p>
+  Application dédiée à la gestion des ressources humaines au sein de la société Ormval, facilitant le suivi du personnel et des processus RH.
+</p>
+<br>
+    <br>
+<a href="https://github.com/oumaoubbad/GestionRH" target="_blank" class="github-link">
+  <!-- Icône GitHub SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 6px;">
+    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+    0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+    1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+    0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.7 7.7 0 012 0c1.53-1.03 
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 
+    3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 
+    8 0 0016 8c0-4.42-3.58-8-8-8z"/>
+  </svg>
+  Voir sur GitHub
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact">
+  <br>
+  <div class="container">
+    <h1  style=" font-size: 60px; color: #ccc; text-align: center;" data-i18n="contact_title">Vous avez des questions ?</h1> <br>
+    <p style="color: #ccc; text-align: center;" data-i18n="contact_subtitle">JE SUIS À VOTRE SERVICE</p>
+    <div class="contact-icons">
+      <div class="contact-box">
+        <i class="fas fa-phone"></i>
+        <p><strong data-i18n="call_me">Appelez-moi</strong><br />+212 631595850</p>
+      </div>
+      <div class="contact-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <p><strong data-i18n="current_location">Actuellement à</strong><br />Tanger, Maroc</p>
+      </div>
+      <div class="contact-box">
+        <i class="fas fa-envelope"></i>
+        <p><strong data-i18n="email">Email</strong><br />oumaima.oubbad107@gmail.com</p>
+      </div>
+      <div class="contact-box">
+        <i class="fas fa-globe"></i>
+        <p><strong data-i18n="website">Site Web</strong><br />oumaima.com</p>
+      </div>
+    </div>
+    <h2 class="send-email-title" data-i18n="send_email_title">ENVOYEZ-MOI UN EMAIL</h2>
+    <p style="color: #ccc; text-align: center;" data-i18n="send_email_subtitle">JE RÉPONDS TRÈS RAPIDEMENT AUX MESSAGES</p>
+    <div class="contact-form">
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Votre nom" required />
+        <input type="email" name="Email" placeholder="Votre email" required />
+        <textarea name="Message" rows="6" placeholder="Votre message"></textarea>
+        <button type="submit" class="btn btn2" data-i18n="send_email_title">Envoyer</button>
+      </form>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; <span id="year"></span> Oumaima Oubbad</p>
+  </div>
+</div>
+
+
+<!-- Palette couleur fixe à droite -->
+<div class="color-picker" aria-label="Changer la couleur du thème" style="
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+">
+  <span class="color-option" style="background: #ff004f; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 2px solid #fff;" onclick="changeColor('#ff004f')" title="Rouge"></span>
+<span class="color-option" style="background: #007bff; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 2px solid #fff;" onclick="changeColor('#007bff')" title="Bleu"></span>
+<span class="color-option" style="background: #28a745; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 2px solid #fff;" onclick="changeColor('#28a745')" title="Vert"></span>
+<span class="color-option" style="background: #ffa500; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 2px solid #fff;" onclick="changeColor('#ffa500')" title="Orange"></span>
+<span class="color-option" style="background: #800080; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 2px solid #fff;" onclick="changeColor('#800080')" title="Mauve"></span>
+
+</div>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  // Tabs
+  function opentab(event, tabname) {
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    for (let tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+  // Menu responsive
+  const sidemenu = document.getElementById("sidemenu");
+
+  function openmenu() {
+    sidemenu.classList.add("open");
+  }
+
+  function closemenu() {
+    sidemenu.classList.remove("open");
+  }
+
+  // Année automatique
+  document.getElementById("year").innerText = new Date().getFullYear();
+
+  // Palette couleur
+  function changeColor(color) {
+    document.documentElement.style.setProperty('--main-color', color);
+    localStorage.setItem('themeColor', color);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedColor = localStorage.getItem('themeColor');
+    if (savedColor) {
+      document.documentElement.style.setProperty('--main-color', savedColor);
+    }
+  });
+
+  // ✅ Formulaire Google Sheets avec SweetAlert2
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw0yDMXc19w18VQsTzPnYn830iJiNk5YNnWXV0tMDDfByDA1PEOS01DMme01SKFCaU/exec';
+  const form = document.forms['submit-to-google-sheet'];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        if (!response.ok) throw new Error('Erreur HTTP ' + response.status);
+        Swal.fire({
+          icon: 'success',
+          title: 'Message envoyé !',
+          text: 'Merci pour votre message. Je vous répondrai très vite 😊',
+          confirmButtonColor: getComputedStyle(document.documentElement).getPropertyValue('--main-color') || '#ff004f'
+        });
+        form.reset();
+      })
+      .catch(error => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Erreur',
+          text: 'Une erreur est survenue. Veuillez réessayer.',
+          confirmButtonColor: '#ff004f'
+        });
+        console.error('Erreur !', error.message);
+      });
+  });
+</script>
+
+
+</body>
+</html>
