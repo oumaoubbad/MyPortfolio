@@ -14,8 +14,8 @@ Ce portfolio moderne et responsive a été conçu pour :
 - Permettre de **changer la langue** du site : 🇫🇷 🇬🇧 🇸🇦  
 - Permettre de **changer le thème** du site avec 5 couleurs 🎨 :  
   🌸 *Rose* | 💙 *Bleu* | 💚 *Vert* | 🖤 *Motard* | 💜 *Mauve*
-   ![Login](screenshots/home.PNG)
-  ![Login](screenshots/violet.PNG)
+   ![Login](porto/home.PNG)
+  ![Login](porto/violet.PNG)
 ## ✨ Fonctionnalités
 
 - 🔄 Changement de langue dynamique (Français / Anglais / Arabe)
