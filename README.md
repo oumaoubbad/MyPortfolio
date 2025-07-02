@@ -51,8 +51,6 @@ Ce portfolio moderne et responsive a été conçu pour :
 - ![Login](porto/tra.PNG)
 - - Page de services
 - ![Login](porto/service.PNG)
-- Section CV avec bouton de téléchargement
-- ![Login](porto/home.PNG)
 
 ## 📩 Contact
 ![Login](porto/contact.PNG)
